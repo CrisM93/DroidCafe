@@ -21,7 +21,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+   //En la rama DroidCafeInput
     public static final String EXTRA_MESSAGE="com.example.android.droidcafeinput.extra.MESSAGE";;
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
