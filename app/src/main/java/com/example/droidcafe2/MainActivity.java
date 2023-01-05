@@ -1,5 +1,6 @@
 package com.example.droidcafe2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -20,10 +21,12 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+// En la rama MASTER
     public static final String EXTRA_MESSAGE="com.example.android.droidcafeinput.extra.MESSAGE";;
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    private String mOrderMessage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         setSupportActionBar(binding.toolbar);
-
-
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Le podemos dar una accion", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+                intent.putExtra(EXTRA_MESSAGE, mOrderMessage);
+                startActivity(intent);
+                          }
         });
     }//fin del on Create
 
@@ -74,21 +75,28 @@ public class MainActivity extends AppCompatActivity {
      * Shows a message that the donut image was clicked.
      */
     public void showDonutOrder(View view) {
-        displayToast(getString(R.string.donut_order_message));
+
+        mOrderMessage = getString(R.string.donut_order_message);
+        displayToast(mOrderMessage);
+        //displayToast(getString(R.string.donut_order_message));
     }
 
     /**
      * Shows a message that the ice cream sandwich image was clicked.
      */
     public void showIceCreamOrder(View view) {
-        displayToast(getString(R.string.ice_cream_order_message));
+        mOrderMessage = getString(R.string.ice_cream_order_message);
+        displayToast(mOrderMessage);
+        //displayToast(getString(R.string.ice_cream_order_message));
     }
 
     /**
      * Shows a message that the froyo image was clicked.
      */
     public void showFroyoOrder(View view) {
-        displayToast(getString(R.string.froyo_order_message));
+        mOrderMessage = getString(R.string.froyo_order_message);
+        displayToast(mOrderMessage);
+        //displayToast(getString(R.string.froyo_order_message));
     }
 
 } //Fin MainActivity
