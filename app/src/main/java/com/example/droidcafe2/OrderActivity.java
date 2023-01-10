@@ -53,6 +53,7 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
         boolean checked = ((RadioButton) view).isChecked();
         // Check which radio button was clicked.
         switch (view.getId()) {
+
             case R.id.sameday:
                 if (checked)
                     // Same day service
