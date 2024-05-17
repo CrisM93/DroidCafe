@@ -13,3 +13,15 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Android Studio
+.idea
+.idea/assetWizardSettings.xml
+.idea/*
+/*/release/output-metadata.json
+/*/staging/output-metadata.json
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+.navigation
+captures/
+output.json
+build/
