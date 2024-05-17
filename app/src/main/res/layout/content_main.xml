@@ -10,10 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:textStyle="bold"
+        android:text="Maquina de heladitos"
         android:textColor="#000000"
         android:textSize="26dp"
-        android:text="Maquina de heladitos"
+        android:textStyle="bold"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -22,12 +22,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="512dp"
         android:contentDescription="@string/donuts_are_glazed_and_sprinkled_with_candy"
+        android:onClick="showDonutOrder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/donut_circle"
-        android:onClick="showDonutOrder"
         tools:ignore="ImageContrastCheck,ImageContrastCheck" />
 
     <ImageView
@@ -36,12 +36,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="260dp"
         android:contentDescription="@string/froyo_is_premium_self_serve_frozen_yogurt"
+        android:onClick="showFroyoOrder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/froyo_circle"
-        android:onClick="showFroyoOrder"/>
+        app:srcCompat="@drawable/froyo_circle" />
 
     <ImageView
         android:id="@+id/ice_cream"
@@ -49,12 +49,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="384dp"
         android:contentDescription="@string/ice_cream_sandwiches_have_chocolate_wafers_and_vanilla_filling"
+        android:onClick="showIceCreamOrder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/icecream_circle"
-        android:onClick="showIceCreamOrder"/>
+        app:srcCompat="@drawable/icecream_circle" />
 
     <TextView
         android:id="@+id/donut_description"
@@ -65,6 +65,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:text="@string/donuts_are_glazed_and_sprinkled_with_candy"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -81,6 +83,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:text="@string/ice_cream_sandwiches_have_chocolate_wafers_and_vanilla_filling"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
@@ -97,6 +101,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:text="@string/froyo_is_premium_self_serve_frozen_yogurt"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
