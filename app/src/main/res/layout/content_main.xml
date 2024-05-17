@@ -13,7 +13,7 @@
         android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="26dp"
-        android:text="Maquina de pedidos de helados"
+        android:text="Maquina de heladitos"
         tools:ignore="MissingConstraints" />
 
     <ImageView
